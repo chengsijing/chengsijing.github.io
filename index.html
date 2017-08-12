@@ -14,9 +14,10 @@
 <link href="css/main.css" rel="stylesheet">
 <link href="css/font-awesome.min.css" rel="stylesheet">
 <link href="css/animate-custom.css" rel="stylesheet">
-<!-- <link href="css/yx_rotaion.css" rel="stylesheet"> -->
 
-
+<!-- jquery, Bootstrap core JavaScript --> 
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/modernizr.custom.js"></script>
 
 <!--[if lt IE 9]>
@@ -26,30 +27,23 @@
 
 </head>
 
-<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+<body>
 <div id="navbar-main"> 
   <!-- Fixed navbar -->
   <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        <a class="navbar-brand" href="#home"><i class="fa fa-location-arrow"></i> HPSCIL</a> </div>
+        <!-- <a class="navbar-brand" href="#home"><i class="fa fa-location-arrow"></i> HPSCIL</a> </div> -->
+        <a class="navbar-brand" href="#"><img src="img/LOGOsmall.png" style="margin-top:-20px"> HPSCIL</a> </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#home" class="smoothScroll">首页</a></li>
-          <li> <a href="#about" class="smoothScroll"> 实验室简介</a></li>
-          <li> <a href="#news" class="smoothScroll"> 学术要闻</a></li>
-          <li class="dropdown"> 
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> 成果系统</a>
-            <ul class="dropdown-menu">
-              <li><a href="#">面差值系统</a></li>
-              <li><a href="#">数据融合系统</a></li>
-              <li class="divider"></li>
-              <li><a href="#sys" class="smoothScroll">成果系统介绍</a></li>
-            </ul>
-          </li>
-          <li> <a href="#team" class="smoothScroll"> 团队成员</a></li>
-          <li> <a href="#contact" class="smoothScroll"> 联系我们</a></li>
+          <li><a href="#">首页</a></li>
+          <li> <a href="intro.html"> 实验室简介</a></li>
+          <li> <a href="news.html"> 学术要闻</a></li>
+          <li> <a href="system.html"> 成果系统</a></li>
+          <li> <a href="team.html"> 团队成员</a></li>
+          <li> <a href="contact.html"> 联系我们</a></li>
         </ul>
       </div>
       <!--/.nav-collapse --> 
@@ -58,13 +52,30 @@
 </div>
 
 <!-- ==== HEADERWRAP ==== -->
-<div id="headerwrap" name="home">
-  <header class="clearfix">
-    <img src="img/logo.png" class="img-responsive center-block">
-    <h1></h1>
-    <p>高性能智能计算实验室<br>
-      High-performance Spatial Computational Intelligence Lab</p>
-    <a href="#sys" class="smoothScroll btn btn-lg">See Our Works</a> </header>
+<div id="myCarousel" class="carousel slide"  style="margin-top:75px;">
+  <!-- 轮播（Carousel）指标 -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>   
+  <!-- 轮播（Carousel）项目 -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <a href="#"><img src="img/1.jpg" alt="First slide"></a>
+    </div>
+    <div class="item">
+      <a href="#"><img src="img/1.jpg" alt="Second slide"></a>
+    </div>
+    <div class="item">
+      <a href="#"><img src="img/1.jpg" alt="Third slide"></a>
+    </div>
+  </div>
+  <!-- 轮播（Carousel）导航 -->
+  <a class="icon-prev" href="#myCarousel" 
+     data-slide="prev">&lsaquo;</a>
+  <a class="icon-next" href="#myCarousel" 
+     data-slide="next">&rsaquo;</a>
 </div>
 
 <!-- /headerwrap --> 
@@ -75,12 +86,13 @@
     <div class="row white">
       <div class="col-md-6"> <img class="img-responsive" src="img/about1.jpg" align=""> </div>
       <div class="col-md-6">
-        <h3>实验室简介</h3>
-        <p>计算并行计算集群以及云计算平台的构建、部署和管理，高性能以及智能空间分析和模拟算法的研究，面向地理时空的空间数据挖掘;分布式空间计算策略、高性能计算和计算智能在城市空间发展，土地利用，生态环境等领域研究。</p>
-        <h3>加入我们</h3>
-        <p>招聘成员基本条件:<br>
+        <h3 class="text-center">高性能智能计算实验室</h3>
+        <h3 class="text-center">HPSCIL</h3>
+        <p>计算并行计算集群以及云计算平台的构建、部署和管理，高性能以及智能空间分析和模拟算法的研究，面向地理时空的空间数据挖掘;分布式空间计算策略、高性能计算和计算智能在城市空间发展，土地利用，生态环境等领域研究。<br>
+        招聘成员基本条件:<br>
         了解基本的计算机软硬件结构,对inux操作系统感兴趣,具备一定的C/C++编程基础,对高性能计算、云计算等先进计算技术感兴趣,数学建模感兴趣，对空间建模等相关算法感兴趣
         </p>
+        <a href="intro.html" target="_blank" class="btn-lg center-block text-center">See More About</a>
       </div>
     </div>
     <!-- row --> 
@@ -96,14 +108,15 @@
       <hr>
       <div class="col-md-6"> 
         <h3>实验室研究进展</h3>
-        <div class="yx-rotaion">
-          <ul class="rotaion_list">
-            <li><a href=""><img src="img/news/1.jpg" alt="图片信息1"></a></li>
-            <li><a href=""><img src="img/news/2.jpg" alt="图片信息2"></a></li>
-            <li><a href=""><img src="img/news/3.jpg" alt="图片信息3"></a></li>
-            <li><a href=""><img src="img/news/4.jpg" alt="图片信息4"></a></li>
-            <li><a href=""><img src="img/news/5.jpg" alt="图片信息5"></a></li>
-          </ul>
+        <div id="lista">
+          <div class="list-group" >
+            <a href="#" class="list-group-item">高性能实验室</a>
+            <a href="#" class="list-group-item">高性能实验室</a>
+            <a href="#" class="list-group-item">高性能实验室</a>
+            <a href="#" class="list-group-item">高性能实验室</a>
+            <a href="#" class="list-group-item">高性能实验室</a>
+            <a href="#" class="list-group-item">高性能实验室</a>
+          </div>
         </div>
       </div>
 
@@ -119,16 +132,12 @@
           </ul>
         </div>
       </div>
-
-
-
-      <!-- <div class="col-md-4 callout"> <i class="fa fa-dot-circle-o fa-3x"></i>
-        <h3>相关活动</h3>
-        <p>Erat imperdiet dissentias ea usu, alia aliquid corrumpit ea qui. Eu vim oratio conclusionemque, vel at errem nominavi delicatissimi.</p>
-      </div> -->
-                
+      
     </div>
-    <!-- row --> 
+    <!-- row -->
+    <div class="col-md-8 col-md-offset-2 centered">
+        <a href="news.html" target="_blank" class="btn btn-lg">更多学术要闻</a>
+    </div> 
   </div>
 </div>
 <!-- container --> 
@@ -226,31 +235,31 @@
 <!-- ==== TEAM MEMBERS ==== -->
 <div id="team" name="team">
   <div class="container">
-    <div class="row centered">
+    <div class="row">
       <h2 class="centered">团队成员</h2>
       <hr>
-      <div class="col-md-3 centered"> <img class="img img-circle" src="img/team/team01.jpg" height="120px" width="120px" alt="">
+      <div class="col-md-3 centered"> <img class="img img-circle" src="img/team/team01.jpg" height="120px" width="120px" alt="" >
         <h4>关庆锋教授</h4>
         <p>教授、博导。2012年入选中国“青年千人计划”。主要从事地理信息系统（GIS）和地理信息科学（GIScience）研究。美国地理学家协会（AAG信息基础设施组高性能计算委员会主席，制图与地理信息协会（CaGIS成员,国际华人地理信息科学协会（CPGIS）成员。</p>
-        <a href="#team" class="smoothScroll btn btn-lg">See More</a>
+        <a href="#" class="btn btn-lg">See More</a>
       </div>
       <div class="col-md-3 centered"> <img class="img img-circle" src="img/team/team02.jpg" height="120px" width="120px" alt="">
         <h4>曾文教授</h4>
         <p>湖北武汉人，博士，中国地质大学（武汉）教授。研究方向为：计算机软件、应用及地理信息系统。研究兴趣包括：GIS空间分析、空间计算智能、城市网络模型及优化算法、城市管线网地理信息系统、交通地理信息系统、智慧城市和数字市政。</p>
-        <a href="#team" class="smoothScroll btn btn-lg">See More</a>
+        <a href="#" class="btn btn-lg">See More</a>
       </div>
       <div class="col-md-3 centered"> <img class="img img-circle" src="img/team/team03.jpg" height="120px" width="120px" alt="">
         <h4>龚君芳讲师</h4>
         <p>研究方向：三维地理信息系统及地学模拟，地理计算与空间分析，网格生成，计算机图形学，编译器。主讲课程：计算机图形学，编译原理，计算机结构与组成，Windows程序设计，GIS专业英语，形式语言与自动机，C++。</p>
-        <a href="#team" class="smoothScroll btn btn-lg">See More</a>
+        <a href="#" class="btn btn-lg">See More</a>
       </div>
       <div class="col-md-3 centered"> <img class="img img-circle" src="img/team/team04.jpg" height="120px" width="120px" alt="">
         <h4>胡楚丽副教授</h4>
         <p>博士，特任副教授，硕士生导师。2010年武汉大学测绘遥感信息工程重点实验室地图学与地理信息系统专业硕士；2013年武汉大学测绘遥感信息工程重点实验室摄影测量与遥感专业博士。</p>
-        <a href="#team" class="smoothScroll btn btn-lg">See More</a>
+        <a href="#" class="btn btn-lg">See More</a>
       </div>
-      <div class="col-md-8 col-md-offset-2 centered">
-        <a href="#team" class="smoothScroll btn btn-lg">查看团队简介</a>
+      <div class="col-md-12 centered">
+        <a href="team.html" target="_blank" class="btn btn-lg">查看团队简介</a>
       </div>
     </div>
   </div>
@@ -301,18 +310,22 @@
   </div>
 </div>
 
-<!-- Bootstrap core JavaScript================================================== --> 
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
 <!-- Placed at the end of the document so the pages load faster -->
-<script type="text/javascript" src="js/jquery.min.js"></script>
+
+<!-- js for carousel -->
 <script type="text/javascript" src="js/jquery.yx_rotaion.js"></script>
 <script type="text/javascript">
 $(".yx-rotaion").yx_rotaion({auto:true});
 </script>
-
+<script> 
+ $(document).ready(function(){ 
+ $('#myCarousel').carousel({interval:3000});//每隔5秒自动轮播 
+ }); 
+ </script>
+<!-- other -->
 <script type="text/javascript" src="js/retina.js"></script> 
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script> 
-<script type="text/javascript" src="js/smoothscroll.js"></script> 
 <script type="text/javascript" src="js/jquery-func.js"></script>
 
 
